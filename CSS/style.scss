@@ -1,3 +1,8 @@
+@mixin flou {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: rgba(182, 182, 182, 0.2);
+    }
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -5,6 +10,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     max-width: 1400px;
+    margin-bottom: 50px;
     background-color: rgb(8,14,34);
     background-color: -moz-linear-gradient(-45deg, rgb(8,14,34) 0%, rgb(28,48,116) 100%);
     background-color: -webkit-linear-gradient(-45deg, rgb(8,14,34) 0%, rgb(28,48,116) 100%);
@@ -25,7 +31,7 @@ header{
         justify-content: space-around;
         list-style-type: none;
         padding: 0px;
-        gap: 5px;
+        gap: 15px;
         margin-left: 10px;
     }
     & span {
@@ -50,4 +56,50 @@ header{
     }
 }
 
+.section_1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding-top: 50px;
+
+    & .section_1_gauche {
+        display: flex;
+        flex-direction: column;
+
+        & .mois_precedent {
+            display: flex;
+            gap: 30px;
+            height: 350px;
+            & .mois_precedent_in {
+                width: 250px;
+                height: 250px;
+                @include flou;
+                border-radius: 20px;
+            }
+        }
+        & .simulateur_epargne {
+            @include flou;
+            width: 810px;
+            height: 450px;
+            border-radius: 20px;
+        }
+    }
+    & .section_1_droite {
+        width: 400px;
+        height: 800px;
+        @include flou;
+        border-radius: 20px;
+    }
+}
+.section_2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    & .section_2_in {
+        height: 200px;
+        width: 600px;
+        @include flou;
+        border-radius: 20px;
+    }
+}
 
