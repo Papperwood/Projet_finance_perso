@@ -85,7 +85,7 @@ header{
         }
     }
     & .section_1_droite {
-        width: 400px;
+        width: 450px;
         height: 800px;
         @include flou;
         border-radius: 20px;
@@ -94,12 +94,22 @@ header{
 .section_2 {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
     & .section_2_in {
         height: 200px;
-        width: 600px;
+        width: 650px;
         @include flou;
         border-radius: 20px;
     }
 }
-
+.section_3 {
+    @include flou;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 300px;
+    width: auto;
+}
